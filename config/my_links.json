@@ -1,0 +1,10 @@
+{
+  "_comment": "Add your affiliate tracking URLs here, OR use .env (both work). This file is gitignored.",
+  "hostinger": "",
+  "namecheap": "",
+  "grammarly": "",
+  "canva": "",
+  "fiverr": "",
+  "nordvpn": "",
+  "coursera": ""
+}

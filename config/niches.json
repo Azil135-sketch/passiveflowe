@@ -1,0 +1,82 @@
+{
+  "niches": [
+    {
+      "id": "student_tools",
+      "name": "Best Tools for Students",
+      "description": "Productivity, writing, design tools for students",
+      "affiliates": ["grammarly", "canva", "coursera", "nordvpn"],
+      "keywords": [
+        "best tools for students 2025",
+        "free apps for college students",
+        "grammarly vs prowritingaid",
+        "canva for students free",
+        "online courses for free certificates",
+        "vpn for students"
+      ],
+      "post_templates": [
+        "Best {tool} Alternatives in {year}",
+        "{tool} Review: Is It Worth It for Students?",
+        "How to Get {tool} for Free as a Student",
+        "Top {number} {category} Tools for {audience}"
+      ]
+    },
+    {
+      "id": "website_creation",
+      "name": "Start a Website / Blog",
+      "description": "Hosting, domains, website building for beginners",
+      "affiliates": ["hostinger", "namecheap"],
+      "keywords": [
+        "how to start a blog in 2025",
+        "cheapest web hosting india",
+        "hostinger review india",
+        "best domain registrar india",
+        "how to make a website for free",
+        "wordpress hosting india"
+      ],
+      "post_templates": [
+        "How to Start a Blog in {year}: Step-by-Step Guide",
+        "{hosting} Review {year}: Worth It?",
+        "Cheapest Web Hosting for Students in India",
+        "{hosting1} vs {hosting2}: Which Should You Choose?"
+      ]
+    },
+    {
+      "id": "freelancing",
+      "name": "How to Freelance Online",
+      "description": "Start freelancing, Fiverr, earn from home",
+      "affiliates": ["fiverr", "grammarly", "canva"],
+      "keywords": [
+        "how to start freelancing for beginners",
+        "fiverr for beginners 2025",
+        "how to make money online in india",
+        "best freelancing skills to learn",
+        "earn money from home india"
+      ],
+      "post_templates": [
+        "How to Start Freelancing with Zero Experience",
+        "Fiverr for Beginners: Complete Guide {year}",
+        "Best Freelancing Skills That Pay Well in India",
+        "How I Earned My First {amount} on Fiverr"
+      ]
+    },
+    {
+      "id": "online_income",
+      "name": "Passive Income Online",
+      "description": "Legitimate halal ways to earn online",
+      "affiliates": ["hostinger", "fiverr", "canva", "coursera"],
+      "keywords": [
+        "halal passive income online",
+        "how to make money online as a student india",
+        "passive income ideas india 2025",
+        "legitimate work from home india",
+        "earn money online without investment india"
+      ],
+      "post_templates": [
+        "{number} Halal Ways to Earn Online in {year}",
+        "How Students Can Earn Passive Income Online",
+        "Legitimate Online Income Ideas That Actually Work",
+        "How to Earn Online in India: A Beginner's Guide"
+      ]
+    }
+  ]
+}
