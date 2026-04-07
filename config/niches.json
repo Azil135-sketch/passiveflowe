@@ -1,81 +1,75 @@
 {
   "niches": [
     {
-      "id": "student_tools",
-      "name": "Best Tools for Students",
-      "description": "Productivity, writing, design tools for students",
-      "affiliates": ["grammarly", "canva", "coursera", "nordvpn"],
+      "id": "budget_tech_india",
+      "name": "Budget Tech for Indians",
+      "description": "Phones, earbuds, laptops under budget for Indian buyers",
+      "affiliates": ["amazon_in", "flipkart", "earnkaro"],
       "keywords": [
-        "best tools for students 2025",
-        "free apps for college students",
-        "grammarly vs prowritingaid",
-        "canva for students free",
-        "online courses for free certificates",
-        "vpn for students"
+        "best earbuds under 1000 rupees",
+        "best phone under 15000 india 2025",
+        "best laptop under 30000 for students india",
+        "boAt earbuds review india",
+        "best budget smartwatch india 2025"
       ],
       "post_templates": [
-        "Best {tool} Alternatives in {year}",
-        "{tool} Review: Is It Worth It for Students?",
-        "How to Get {tool} for Free as a Student",
-        "Top {number} {category} Tools for {audience}"
+        "Best {product} Under {price} in India ({year})",
+        "Top {number} Budget {category} for Indian Students",
+        "{product} Review: Worth It for Indian Students?"
       ]
     },
     {
-      "id": "website_creation",
-      "name": "Start a Website / Blog",
-      "description": "Hosting, domains, website building for beginners",
-      "affiliates": ["hostinger", "namecheap"],
+      "id": "student_study",
+      "name": "Study Tools for Indian Students",
+      "description": "Apps, courses, tools for Class 11/12, college students",
+      "affiliates": ["admitad_in", "amazon_in", "earnkaro"],
       "keywords": [
-        "how to start a blog in 2025",
-        "cheapest web hosting india",
-        "hostinger review india",
-        "best domain registrar india",
-        "how to make a website for free",
-        "wordpress hosting india"
+        "best apps for class 12 students india",
+        "free online courses with certificates india",
+        "best study apps for commerce students",
+        "how to study effectively for board exams",
+        "best books for BCom students india"
       ],
       "post_templates": [
-        "How to Start a Blog in {year}: Step-by-Step Guide",
-        "{hosting} Review {year}: Worth It?",
-        "Cheapest Web Hosting for Students in India",
-        "{hosting1} vs {hosting2}: Which Should You Choose?"
+        "Best {number} Apps for {exam} Preparation ({year})",
+        "Free Online Courses with Certificates for Indian Students",
+        "How to Study {subject} for Class 12 Board Exam"
       ]
     },
     {
-      "id": "freelancing",
-      "name": "How to Freelance Online",
-      "description": "Start freelancing, Fiverr, earn from home",
-      "affiliates": ["fiverr", "grammarly", "canva"],
+      "id": "earn_online_india",
+      "name": "Earn Online India",
+      "description": "Legit ways to earn money online as student in India",
+      "affiliates": ["earnkaro", "flipkart", "admitad_in"],
       "keywords": [
-        "how to start freelancing for beginners",
-        "fiverr for beginners 2025",
-        "how to make money online in india",
-        "best freelancing skills to learn",
-        "earn money from home india"
+        "how to earn money online as student india",
+        "earn money from home india without investment",
+        "freelancing for beginners india",
+        "how to make money on instagram india",
+        "halal ways to earn money online india"
       ],
       "post_templates": [
-        "How to Start Freelancing with Zero Experience",
-        "Fiverr for Beginners: Complete Guide {year}",
-        "Best Freelancing Skills That Pay Well in India",
-        "How I Earned My First {amount} on Fiverr"
+        "{number} Halal Ways to Earn Money Online as Student in India",
+        "How to Start Earning Online with Zero Investment in India",
+        "EarnKaro Review: Can You Really Make Money?"
       ]
     },
     {
-      "id": "online_income",
-      "name": "Passive Income Online",
-      "description": "Legitimate halal ways to earn online",
-      "affiliates": ["hostinger", "fiverr", "canva", "coursera"],
+      "id": "website_india",
+      "name": "Start a Website in India",
+      "description": "Domains, hosting, blogging for Indians",
+      "affiliates": ["bigrock", "cuelinks", "amazon_in"],
       "keywords": [
-        "halal passive income online",
-        "how to make money online as a student india",
-        "passive income ideas india 2025",
-        "legitimate work from home india",
-        "earn money online without investment india"
+        "how to start a blog in india for free",
+        "cheapest domain registration india",
+        "best web hosting india for beginners",
+        "how to make a website in india step by step",
+        "BigRock vs GoDaddy india"
       ],
       "post_templates": [
-        "{number} Halal Ways to Earn Online in {year}",
-        "How Students Can Earn Passive Income Online",
-        "Legitimate Online Income Ideas That Actually Work",
-        "How to Earn Online in India: A Beginner's Guide"
+        "How to Start a Blog in India in {year}: Step-by-Step",
+        "Cheapest Web Hosting in India ({year}) — Compared",
+        "BigRock Review {year}: Best Domain Registrar India?"
       ]
     }
   ]
