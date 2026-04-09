@@ -105,3 +105,10 @@ jobs:
           name: swarm-logs-${{ github.run_number }}
           path: logs/
           retention-days: 30
+
+      - name: Test Telegram
+        if: ${{ github.event.inputs.mode == 'status' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: python test_telegram.py
