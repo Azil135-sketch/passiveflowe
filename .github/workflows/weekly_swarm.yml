@@ -1,0 +1,107 @@
+name: PassiveFlow Weekly Swarm
+
+on:
+  # Run every Monday at 8:00 AM UTC (1:30 PM IST)
+  schedule:
+    - cron: '0 8 * * 1'
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - inject
+          - deploy
+          - status
+
+permissions:
+  contents: write  # Needed to push new content
+
+jobs:
+  run-swarm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "passiveflow-bot@users.noreply.github.com"
+          git config --global user.name "PassiveFlow Bot"
+
+      - name: Run Full Swarm
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.mode == 'full' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          SITE_NAME: ${{ secrets.SITE_NAME }}
+          AUTHOR_NAME: ${{ secrets.AUTHOR_NAME }}
+          # Affiliate link env vars — add as you sign up for each program
+          AFFILIATE_FLIPKART_URL: ${{ secrets.AFFILIATE_FLIPKART_URL }}
+          AFFILIATE_EARNKARO_URL: ${{ secrets.AFFILIATE_EARNKARO_URL }}
+          AFFILIATE_AMAZON_IN_URL: ${{ secrets.AFFILIATE_AMAZON_IN_URL }}
+          AFFILIATE_CUELINKS_URL: ${{ secrets.AFFILIATE_CUELINKS_URL }}
+          AFFILIATE_BIGROCK_URL: ${{ secrets.AFFILIATE_BIGROCK_URL }}
+          AFFILIATE_ADMITAD_URL: ${{ secrets.AFFILIATE_ADMITAD_URL }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+        run: python orchestrator.py
+
+      - name: Inject Links Only
+        if: ${{ github.event.inputs.mode == 'inject' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AFFILIATE_FLIPKART_URL: ${{ secrets.AFFILIATE_FLIPKART_URL }}
+          AFFILIATE_EARNKARO_URL: ${{ secrets.AFFILIATE_EARNKARO_URL }}
+          AFFILIATE_AMAZON_IN_URL: ${{ secrets.AFFILIATE_AMAZON_IN_URL }}
+          AFFILIATE_CUELINKS_URL: ${{ secrets.AFFILIATE_CUELINKS_URL }}
+          AFFILIATE_BIGROCK_URL: ${{ secrets.AFFILIATE_BIGROCK_URL }}
+          AFFILIATE_ADMITAD_URL: ${{ secrets.AFFILIATE_ADMITAD_URL }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+        run: python orchestrator.py --inject
+
+      - name: Deploy Only
+        if: ${{ github.event.inputs.mode == 'deploy' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          SITE_NAME: ${{ secrets.SITE_NAME }}
+        run: python orchestrator.py --deploy
+
+      - name: Upload logs as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: swarm-logs-${{ github.run_number }}
+          path: logs/
+          retention-days: 30
