@@ -5,3 +5,10 @@
 2026-04-09 04:49:30 | seo_agent | INFO | robots.txt generated
 2026-04-09 04:49:30 | seo_agent | INFO | Saved 1 results to logs/seo_agent_results.json
 2026-04-09 04:49:30 | seo_agent | INFO | SEOAgent done.
+2026-04-09 05:01:55 | seo_agent | INFO | SEOAgent starting...
+2026-04-09 05:01:55 | seo_agent | WARNING | No content_agent_results.json found.
+2026-04-09 05:01:55 | seo_agent | INFO | Built 0 full HTML pages
+2026-04-09 05:01:55 | seo_agent | INFO | Sitemap generated: 1 URLs
+2026-04-09 05:01:55 | seo_agent | INFO | robots.txt generated
+2026-04-09 05:01:55 | seo_agent | INFO | Saved 1 results to logs/seo_agent_results.json
+2026-04-09 05:01:55 | seo_agent | INFO | SEOAgent done.
