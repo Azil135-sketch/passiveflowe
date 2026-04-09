@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://Azil135-sketch.github.io/passiveflow/sitemap.xml
+
+# PassiveFlow - Automated SEO Blog
