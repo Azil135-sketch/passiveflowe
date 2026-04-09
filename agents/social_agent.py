@@ -149,7 +149,6 @@ Add 2-3 emojis. Return ONLY the Telegram post text."""
         self.logger.info("SocialAgent starting...")
 
         if not posts:
-            # Load from content agent results
             results_file = Path("logs/content_agent_results.json")
             if results_file.exists():
                 with open(results_file) as f:
@@ -157,14 +156,24 @@ Add 2-3 emojis. Return ONLY the Telegram post text."""
             else:
                 posts = []
 
-        # Post article teasers
+        # Post article teasers (only if we have posts)
         if posts:
             posted = self.post_new_articles(posts)
         else:
             posted = 0
+            # Still send a welcome/status message so you know the bot works
+            self.logger.info("No posts yet — sending channel intro message")
+            site_url = self.site_url
+            channel = self.channel_id
+            intro = (
+                f"👋 Welcome to {channel}!\n\n"
+                f"This channel shares weekly deals, earning tips, and free resources for students in India.\n\n"
+                f"New posts drop every Monday. Stay tuned 📚"
+            )
+            self._send_message(intro)
 
-        # Post weekly affiliate deal
-        time.sleep(5)
+        # Always post weekly affiliate deal
+        time.sleep(3)
         self.post_weekly_deal()
 
         result = {"posts_teased": posted, "weekly_deal": True}
