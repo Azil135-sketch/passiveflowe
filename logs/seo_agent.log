@@ -33,3 +33,10 @@
 2026-04-27 13:08:26 | seo_agent | INFO | robots.txt generated
 2026-04-27 13:08:26 | seo_agent | INFO | Saved 1 results to logs/seo_agent_results.json
 2026-04-27 13:08:26 | seo_agent | INFO | SEOAgent done.
+2026-05-04 13:13:48 | seo_agent | INFO | SEOAgent starting...
+2026-05-04 13:13:48 | seo_agent | WARNING | No content_agent_results.json found.
+2026-05-04 13:13:48 | seo_agent | INFO | Built 0 full HTML pages
+2026-05-04 13:13:48 | seo_agent | INFO | Sitemap generated: 1 URLs
+2026-05-04 13:13:48 | seo_agent | INFO | robots.txt generated
+2026-05-04 13:13:48 | seo_agent | INFO | Saved 1 results to logs/seo_agent_results.json
+2026-05-04 13:13:48 | seo_agent | INFO | SEOAgent done.
