@@ -136,3 +136,13 @@
 2026-06-29 12:27:59 | social_agent | ERROR | API error on attempt 2: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
 2026-06-29 12:28:09 | social_agent | INFO | Gemini API call (attempt 3/3)
 2026-06-29 12:28:09 | social_agent | ERROR | API error on attempt 3: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-07-06 12:00:51 | social_agent | INFO | SocialAgent starting...
+2026-07-06 12:00:51 | social_agent | INFO | No posts yet — sending channel intro message
+2026-07-06 12:00:51 | social_agent | INFO | Telegram message sent (message_id: 16)
+2026-07-06 12:00:54 | social_agent | INFO | Weekly deal: BigRock India
+2026-07-06 12:00:54 | social_agent | INFO | Gemini API call (attempt 1/3)
+2026-07-06 12:00:54 | social_agent | ERROR | API error on attempt 1: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-07-06 12:00:59 | social_agent | INFO | Gemini API call (attempt 2/3)
+2026-07-06 12:00:59 | social_agent | ERROR | API error on attempt 2: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-07-06 12:01:09 | social_agent | INFO | Gemini API call (attempt 3/3)
+2026-07-06 12:01:10 | social_agent | ERROR | API error on attempt 3: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
