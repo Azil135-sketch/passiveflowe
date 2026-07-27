@@ -304,5 +304,23 @@
     "links_injected": 0,
     "timestamp": "2026-07-20T10:47:46.588688",
     "agent": "affiliate_agent"
+  },
+  {
+    "configured": [
+      "FLIPKART_LINK",
+      "EARNKARO_LINK",
+      "AMAZON_IN_LINK",
+      "CUELINKS_SCRIPT",
+      "BIGROCK_LINK"
+    ],
+    "pending": [
+      "ADMITAD_LINK"
+    ],
+    "configured_count": 5,
+    "pending_count": 1,
+    "monetisation_ready": false,
+    "links_injected": 0,
+    "timestamp": "2026-07-27T11:15:46.560445",
+    "agent": "affiliate_agent"
   }
 ]
